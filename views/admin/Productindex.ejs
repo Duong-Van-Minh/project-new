@@ -1,0 +1,43 @@
+<%- include('../layuot/adminheader'); -%>
+<h2 class="page-title">Product</h2>
+<a href="/admin/add_Product" class="btn btn-primary">Add product</a>
+<% if (count > 0) { %>
+    <table class="table table-hover sorting">
+        <thead>
+            <tr>
+                <th>stt</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>img</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% product.forEach(p => { %>
+                <tr>
+                    <td><%= p.length %> </td>
+                    <td><%= p.title %> </td>
+                    <td><%= p.price %> </td>
+                    <td><%= p.category %> </td>
+                    <td>
+                        <% if (p.image == "") { %>
+                            <img id = "noimage" src="/images/noimage.png">
+                        <% } else { %>
+                            <img id = "noimage" src="/product_images/<%= p._id %>/<%= p.image %>">
+                        <% } %>
+                    </td>
+                    <td><a href="/admin/edit-product/<%= p._id %>">edit</a></td>
+                    <td><a href="/admin/delete-product/<%= p._id %>" class="confirm">Delete</a></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+<% } else { %>
+  <h3 class="text-center">not File product</h3>
+<% } %>
+
+
+<%- include('../layuot/adminfooter'); -%>
+

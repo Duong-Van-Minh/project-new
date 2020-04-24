@@ -1,0 +1,32 @@
+{
+  "name": "nodejsshopping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.2",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^3.2.1",
+    "fs-extra": "^9.0.0",
+    "mkdirp": "^0.5.5",
+    "mongoose": "^5.9.7",
+    "mv": "^2.1.1",
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "resize-img": "^2.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+<%- include('../layuot/header'); -%>
+    
+    <div class="row products">
+        <% products.forEach(p => { %>
+          <div class="col-xs-12 col-md-4 p">
+            <a class="pa" href="/product/<%= p.category %>/<%= p.slug %>">
+              <img src="/product_images/<%= p._id %>/<%= p.image %>" alt="Responsive image"  class="item">
+            </a>
+                <div class="card-body">
+                  <h4 class="card-title"><%= p.title %></h4>
+                  <p class="card-text">$<%= parseFloat(p.price).toFixed(2) %></p>
+                  <a href="#" class="btn btn-primary">View details</a>
+                </div>
+        </div>
+        <% }) %>
+        
+        
+    </div>
+    
+
+
+
+        
+<%- include('../layuot/footer'); -%>
